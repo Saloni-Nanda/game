@@ -55,7 +55,7 @@ export default function Section2() {
                     <div className="relative w-full max-w-[350px] mx-auto md:max-w-none">
                         {/* Card Background */}
                         <div
-                            className="rounded-xl h-auto overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
+                            className="rounded-xl  h-auto min-h-[440px] overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
                             style={{
                                 backgroundImage: `url('${bluebuttonbg}')`,
                             }}
