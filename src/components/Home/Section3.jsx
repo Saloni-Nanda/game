@@ -175,7 +175,7 @@ export default function Section3() {
                             ))}
 
                             {/* More Winners Button */}
-                            <div className="flex items-center justify-start sm:justify-center lg:justify-end mt-2 sm:mt-0 pr-10">
+                            <div className="flex items-center justify-start sm:justify-center lg:justify-end mt-2 sm:mt-0  max-w-[310px]">
                                 <button className="flex items-center gap-1 sm:gap-2 group hover:opacity-80 transition-opacity">
                                     <span className="text-white text-sm sm:text-base md:text-[18px] font-semibold" style={{ fontFamily: 'Arial, sans-serif' }}>
                                         More Winners

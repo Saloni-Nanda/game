@@ -25,7 +25,7 @@ const Section1 = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-100 px-4 py-12">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-100 px-4 py-12 mr-0 lg:mr-40">
         {/* Lucky Lotto Text Image */}
         <div className="mb-6">
           <img
@@ -36,11 +36,25 @@ const Section1 = () => {
         </div>
 
         {/* Jackpot Amount */}
-        <div className="mb-8 border-t-4 border-b-4 border-green-800/80 py-3 px-10 bg-linear-to-r from-transparent via-black/50 to-transparent">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 drop-shadow-lg">
-            JACKPOT <span className="text-white">$1,500,000!</span>
-          </h2>
-        </div>
+       <div className="mb-8 justify-center relative">
+  
+  {/* Top Gradient Border */}
+  <div className="absolute top-0 left-0 w-full h-[4px] 
+                  bg-gradient-to-r from-transparent via-green-600 to-transparent">
+  </div>
+
+  {/* Bottom Gradient Border */}
+  <div className="absolute bottom-0 left-0 w-full h-[4px] 
+                  bg-gradient-to-r from-transparent via-green-600 to-transparent">
+  </div>
+
+  <div className="bg-gradient-to-r from-transparent via-black/50 to-transparent py-3">
+    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 drop-shadow-lg text-center">
+      JACKPOT $1,500,000!
+    </h2>
+  </div>
+
+</div>
 
         {/* Play Now Button */}
         <div className="relative group">
