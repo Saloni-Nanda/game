@@ -41,7 +41,7 @@ export default function Section3() {
     ];
 
     return (
-        <div className="relative w-full min-h-[700px] md:min-h-[600px] overflow-hidden p-[50px] lg:p-[100px]">
+        <div className="relative w-full min-h-[700px] md:min-h-[600px] overflow-hidden pb-[50px] lg:pb-[100px]">
             {/* Background Image Container */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -57,12 +57,12 @@ export default function Section3() {
             <div className="relative z-10 px-3 sm:px-4 py-6 sm:py-8">
                 {/* Title */}
                 <h2
-                    className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold mb-6 sm:mb-8 md:mb-10 tracking-wide"
+                    className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 tracking-wide"
                     style={{
                         fontFamily: 'Arial, sans-serif',
                         color: '#FFD700',
                         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.3)',
-                        letterSpacing: '0.02em'
+                        letterSpacing: '0.05em'
                     }}
                 >
                     Latest Winners

@@ -14,7 +14,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function Section2() {
     return (
-        <div className="relative min-h-[700px] h-auto w-full overflow-hidden border-b-2 border-[#0d0a4ba1] shadow-[0_25px_20px_rgba(255,255,255,0.8)] pb-8">
+        <div className="relative min-h-[800px] h-auto w-full overflow-hidden border-b-2 border-[#0d0a4ba1] shadow-[0_25px_20px_rgba(255,255,255,0.8)] pb-8">
             {/* Background Image Container - FIXED TO SHOW FULL BACKGROUND */}
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
@@ -33,10 +33,19 @@ export default function Section2() {
             {/* Content Container */}
             <div className="relative z-10 px-4 py-4">
                 {/* Title */}
-                <div className="flex justify-center mb-8">
-                    <h1 className="text-yellow-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center py-3 [text-shadow:2px_2px_4px_rgb(0_0_0_/80%)]">
-                        Discover Our Games
-                    </h1>
+                <div className="flex justify-center mb-8 mt-2">
+                   
+                      <h2
+                    className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 tracking-wide"
+                    style={{
+                        fontFamily: 'Arial, sans-serif',
+                        color: '#FFD700',
+                        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.3)',
+                        letterSpacing: '0.05em'
+                    }}
+                >
+                    Discover Our Games
+                </h2>
                 </div>
 
                 {/* Games Grid */}
