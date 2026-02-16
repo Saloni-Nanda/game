@@ -14,20 +14,24 @@ import yellowbuttonbg from '../../assets/yellow_buttonbg.jpeg';
 export default function Section2() {
     return (
         <div className="relative min-h-[700px] h-auto w-full overflow-hidden border-b-2 border-[#0d0a4ba1] shadow-[0_25px_20px_rgba(255,255,255,0.8)] pb-8">
-            {/* Background Image Container - ADD YOUR BACKGROUND IMAGE HERE */}
+            {/* Background Image Container - FIXED TO SHOW FULL BACKGROUND */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage: `url(${section2bg})`,
+                    backgroundSize: 'cover', // Ensures the image covers the entire container
+                    backgroundPosition: 'center', // Centers the image
+                    backgroundRepeat: 'no-repeat', // Prevents tiling
                 }}
             >
-                {/* Dark overlay for better text visibility */}
-                <div className="absolute inset-0 bg-black/30"></div>
+                {/* Optional overlay - commented out as in original */}
+                {/* <div className="absolute inset-0 bg-black/30"></div> */}
             </div>
+            
 
             {/* Content Container */}
             <div className="relative z-10 px-4 py-4">
-                {/* Title - ADD YOUR TITLE IMAGE HERE */}
+                {/* Title */}
                 <div className="flex justify-center mb-8">
                     <h1 className="text-yellow-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center py-3 [text-shadow:2px_2px_4px_rgb(0_0_0_/80%)]">
                         Discover Our Games
@@ -39,9 +43,9 @@ export default function Section2() {
                     
                     {/* Keno Blast Card */}
                     <div className="relative w-full max-w-[350px] mx-auto md:max-w-none">
-                        {/* Card Background - ADD YOUR CARD BACKGROUND IMAGE HERE */}
+                        {/* Card Background */}
                         <div
-                            className="rounded-xl h-auto min-h-[440px] overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
+                            className="rounded-xl h-auto overflow-hidden shadow-2xl bg-contain bg-center bg-no-repeat flex flex-col"
                             style={{
                                 backgroundImage: `url('${bluebuttonbg}')`,
                             }}
@@ -57,7 +61,7 @@ export default function Section2() {
                                     </div>
                                 </div>
 
-                                {/* Game Title - ADD YOUR TITLE IMAGE HERE */}
+                                {/* Game Title */}
                                 <div
                                     className="h-14 sm:h-16 bg-contain bg-no-repeat bg-center mb-2 mt-4 z-20"
                                     style={{
@@ -99,7 +103,7 @@ export default function Section2() {
                                     <span>Bet Amount: $2.00</span>
                                 </div>
 
-                                {/* Buttons - Pushed to bottom with margin-top auto */}
+                                {/* Buttons */}
                                 <div className="flex gap-2 justify-between mt-auto">
                                     <div className="flex-1">
                                         <div className="p-[2px] rounded-lg bg-gradient-to-br from-yellow-400 to-green-500">
@@ -143,7 +147,7 @@ export default function Section2() {
 
                     {/* Turbo Keno Card */}
                     <div className="relative w-full max-w-[350px] mx-auto md:max-w-none">
-                        {/* Card Background - ADD YOUR CARD BACKGROUND IMAGE HERE */}
+                        {/* Card Background */}
                         <div
                             className="rounded-xl h-auto min-h-[440px] overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
                             style={{
@@ -154,7 +158,7 @@ export default function Section2() {
                                 background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.8) 100%)'
                             }}></div>
                             <div className="p-3 sm:p-4 flex flex-col flex-1 relative z-10">
-                                {/* Game Title - ADD YOUR TITLE IMAGE HERE */}
+                                {/* Game Title */}
                                 <div
                                     className="h-14 sm:h-16 bg-contain bg-no-repeat bg-center mb-2 mt-4 z-20"
                                     style={{
@@ -196,7 +200,7 @@ export default function Section2() {
                                     <span>Bet Amount: $2.00</span>
                                 </div>
 
-                                {/* Buttons - Pushed to bottom with margin-top auto */}
+                                {/* Buttons */}
                                 <div className="flex gap-2 justify-between mt-auto">
                                     <div className="flex-1">
                                         <div className="p-[2px] rounded-lg bg-gradient-to-br from-yellow-400 to-green-500">
@@ -240,7 +244,7 @@ export default function Section2() {
 
                     {/* Lucky Lotto Card */}
                     <div className="relative w-full max-w-[350px] mx-auto md:max-w-none">
-                        {/* Card Background - ADD YOUR CARD BACKGROUND IMAGE HERE */}
+                        {/* Card Background */}
                         <div
                             className="rounded-xl h-auto min-h-[440px] overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
                             style={{
@@ -250,7 +254,7 @@ export default function Section2() {
                             {/* Dark overlay for better text visibility */}
                             <div className="absolute inset-0 bg-black/30"></div>
                             <div className="p-3 sm:p-4 flex flex-col flex-1 relative z-10">
-                                {/* Game Title - ADD YOUR TITLE IMAGE HERE */}
+                                {/* Game Title */}
                                 <div
                                     className="h-16 sm:h-18 bg-contain bg-no-repeat bg-center mt-4 z-20"
                                     style={{
@@ -265,10 +269,10 @@ export default function Section2() {
                                     </div>
                                 </div>
 
-                                {/* Spacer that grows to push button to bottom */}
+                                {/* Spacer */}
                                 <div className="flex-1"></div>
 
-                                {/* Buttons - Now at bottom */}
+                                {/* Buttons */}
                                 <div className="w-full mt-4">
                                     <div className="p-[2px] rounded-lg bg-gradient-to-br from-yellow-400 to-green-500">
                                         <div
@@ -292,7 +296,7 @@ export default function Section2() {
 
                     {/* Horse Racing Card */}
                     <div className="relative w-full max-w-[350px] mx-auto md:max-w-none">
-                        {/* Card Background - ADD YOUR CARD BACKGROUND IMAGE HERE */}
+                        {/* Card Background */}
                         <div
                             className="rounded-xl h-auto min-h-[440px] overflow-hidden shadow-2xl bg-cover bg-center bg-no-repeat flex flex-col"
                             style={{
@@ -302,7 +306,7 @@ export default function Section2() {
                             {/* Dark overlay for better text visibility */}
                             <div className="absolute inset-0 bg-black/30"></div>
                             <div className="p-3 sm:p-4 flex flex-col flex-1 relative z-10">
-                                {/* Game Title - ADD YOUR TITLE IMAGE HERE */}
+                                {/* Game Title */}
                                 <div
                                     className="h-14 sm:h-16 bg-contain bg-no-repeat bg-center mt-4 z-20"
                                     style={{
@@ -310,10 +314,10 @@ export default function Section2() {
                                     }}
                                 ></div>
 
-                                {/* Spacer that grows to push content down */}
+                                {/* Spacer */}
                                 <div className="flex-1"></div>
 
-                                {/* Jackpot Amount - Now positioned above button */}
+                                {/* Jackpot Amount */}
                                 <div className="text-center mb-4 bg-gradient-to-r from-transparent via-[#00000077] from-transparent">
                                     <div className="px-2 py-1 inline-block">
                                         <span className="text-yellow-300 text-sm sm:text-md font-bold">JACKPOT $25,000.00</span>
@@ -324,7 +328,7 @@ export default function Section2() {
                                     </div>
                                 </div>
 
-                                {/* Buttons - At bottom */}
+                                {/* Buttons */}
                                 <div className="w-full">
                                     <div className="p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500">
                                         <div
@@ -347,7 +351,7 @@ export default function Section2() {
                     </div>
                 </div>
 
-                {/* Bottom Play Now Button - ADD YOUR BUTTON IMAGE HERE */}
+                {/* Bottom Play Now Button */}
                 <div className="flex justify-center px-4">
                     <div className="inline-block p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500 w-full sm:w-auto max-w-[300px] sm:max-w-none">
                         <div
@@ -368,7 +372,7 @@ export default function Section2() {
             </div>
             {/* Bottom Center Glow Effect */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-6 pointer-events-none">
-                <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent blur-md opacity-80"></div>
+                <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent blur-md"></div>
             </div>
         </div>
     );

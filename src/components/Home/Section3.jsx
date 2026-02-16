@@ -41,7 +41,7 @@ export default function Section3() {
     ];
 
     return (
-        <div className="relative w-full min-h-[500px] md:min-h-[400px] overflow-hidden">
+        <div className="relative w-full min-h-[700px] md:min-h-[600px] overflow-hidden p-[50px] lg:p-[100px">
             {/* Background Image Container - ADD YOUR BACKGROUND IMAGE HERE */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -50,7 +50,7 @@ export default function Section3() {
                 }}
             >
                 {/* Dark overlay for better text visibility */}
-                <div className="absolute inset-0 bg-black/30"></div>
+                {/* <div className="absolute inset-0 bg-black/30"></div> */}
             </div>
 
             {/* Content Container */}
@@ -206,7 +206,7 @@ export default function Section3() {
             </div>
             {/* Bottom Center Glow Effect */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-4 sm:h-6 pointer-events-none">
-                <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent blur-md opacity-80"></div>
+                <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent blur-md "></div>
             </div>
         </div>
     );

@@ -18,10 +18,10 @@ const Section1 = () => {
         }}
       >
         {/* Dark overlay on sides, lighter in middle */}
-        <div className="absolute inset-0" style={{
+        {/* <div className="absolute inset-0" style={{
           background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.8) 100%)'
 
-        }}></div>
+        }}></div> */}
       </div>
 
       {/* Content Container */}
@@ -96,8 +96,9 @@ const Section1 = () => {
 
       {/* Bottom Center Glow Effect */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-6 pointer-events-none">
-        <div className="w-full h-full bg-linear-to-r from-transparent via-white to-transparent blur-md opacity-80"></div>
+        <div className="w-full h-full bg-linear-to-r from-transparent via-white to-transparent blur-md "></div>
       </div>
+      
     </section>
   );
 };
