@@ -20,7 +20,7 @@ export default function Section3() {
         {
             name: "Alex M.",
             amount: "$5,215",
-            game: "Turbo Keno",
+            game: "",
             gameIcon: "https://marketplace.canva.com/EAGDIVufSLI/1/0/1600w/canva-black-and-white-illustrative-gaming-logo-Vp2loTXnros.jpg",
             userImage: "https://randomuser.me/api/portraits/men/75.jpg"
         },
@@ -72,7 +72,7 @@ export default function Section3() {
                 <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
                     {/* Winners Box */}
                     <div
-                        className="rounded-xl p-4 sm:p-5 md:p-6"
+                        className="rounded-xl p-4 sm:p-4 md:p-4"
                         style={{
                             background: 'linear-gradient(180deg, rgba(15, 35, 70, 0.6) 0%, rgba(10, 25, 55, 0.6) 100%)',
                             border: '1px solid rgba(30, 70, 130, 0.6)',
@@ -80,12 +80,12 @@ export default function Section3() {
                         }}
                     >
                         {/* First Row - 3 Winners */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-3 md:gap-4 pb-4 mb-4 sm:mb-6 border-b border-[#1e3a5f]">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-3 md:gap-4 pb-2 mb-2 border-b border-[#1e3a5f]">
                             {winners.slice(0, 3).map((winner, index) => (
                                 <div key={index} className="flex items-center gap-2 sm:gap-3">
                                     {/* User Avatar with real image */}
                                     <div
-                                        className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-cover bg-center flex-shrink-0 border-2 border-[#2a5080] overflow-hidden"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-cover bg-center flex-shrink-0 border-2 border-[#2a5080] overflow-hidden"
                                         style={{
                                             backgroundImage: `url('${winner.userImage}')`,
                                             backgroundSize: 'cover',
@@ -99,12 +99,12 @@ export default function Section3() {
                                     </div>
 
                                     {/* Winner Info */}
-                                    <div className="flex flex-col xl:flex-row gap-0.5 xl:gap-4 flex-1 min-w-0">
-                                        <div className="flex items-baseline gap-1 sm:gap-2 flex-wrap">
-                                            <span className="text-white font-bold text-base sm:text-lg md:text-[22px] truncate max-w-[120px] sm:max-w-[140px]" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                    <div className="flex flex-col xl:flex-row gap-0.5 xl:gap-4 flex-1 ">
+                                        <div className="flex items-baseline gap-1 sm:gap-2 flex-wrap ">
+                                            <span className="text-white font-bold text-base sm:text-lg md:text-[22px] truncate w-[120px]" style={{ fontFamily: 'Arial, sans-serif' }}>
                                                 {winner.name}
                                             </span>
-                                            <span className="text-[#FFD700] font-bold text-base sm:text-lg md:text-[22px] whitespace-nowrap flex-shrink-0" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                            <span className="text-[#FFD700] font-bold text-base sm:text-lg md:text-[22px] whitespace-nowrap flex-shrink-0 w-[80px]" style={{ fontFamily: 'Arial, sans-serif' }}>
                                                 {winner.amount}
                                             </span>
                                         </div>
@@ -128,12 +128,12 @@ export default function Section3() {
                         </div>
 
                         {/* Second Row - 2 Winners + More Button */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-3 md:gap-4 ">
                             {winners.slice(3, 5).map((winner, index) => (
                                 <div key={index} className="flex items-center gap-2 sm:gap-3">
                                     {/* User Avatar with real image */}
                                     <div
-                                        className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-cover bg-center flex-shrink-0 border-2 border-[#2a5080] overflow-hidden"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-cover bg-center flex-shrink-0 border-2 border-[#2a5080] overflow-hidden"
                                         style={{
                                             backgroundImage: `url('${winner.userImage}')`,
                                             backgroundSize: 'cover',
@@ -148,11 +148,11 @@ export default function Section3() {
 
                                     {/* Winner Info */}
                                     <div className="flex flex-col xl:flex-row gap-0.5 xl:gap-4 flex-1 min-w-0">
-                                        <div className="flex items-baseline gap-1 sm:gap-2 flex-wrap">
-                                            <span className="text-white font-bold text-base sm:text-lg md:text-[22px] truncate max-w-[120px] sm:max-w-[140px]" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                        <div className="flex items-baseline gap-1 sm:gap-2 flex-wrap ">
+                                            <span className="text-white font-bold text-base sm:text-lg md:text-[22px] truncate w-[120px]" style={{ fontFamily: 'Arial, sans-serif' }}>
                                                 {winner.name}
                                             </span>
-                                            <span className="text-[#FFD700] font-bold text-base sm:text-lg md:text-[22px] whitespace-nowrap flex-shrink-0" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                            <span className="text-[#FFD700] font-bold text-base sm:text-lg md:text-[22px] whitespace-nowrap flex-shrink-0 w-[80px]" style={{ fontFamily: 'Arial, sans-serif' }}>
                                                 {winner.amount}
                                             </span>
                                         </div>
