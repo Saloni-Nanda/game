@@ -9,7 +9,8 @@ import card3bg from '../../assets/card3bg.png';
 import luckylotto from '../../assets/luckylotto.png';
 import card4bg from '../../assets/card4bg.png';
 import horseracing from '../../assets/horseracing.png';
-import yellowbuttonbg from '../../assets/yellow_buttonbg.jpeg';
+import yellowbuttonbg from '../../assets/yellow_buttonbg.png';
+import { ChevronRight } from 'lucide-react';
 
 export default function Section2() {
     return (
@@ -19,9 +20,9 @@ export default function Section2() {
                 className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage: `url(${section2bg})`,
-                    backgroundSize: 'cover', // Ensures the image covers the entire container
-                    backgroundPosition: 'center', // Centers the image
-                    backgroundRepeat: 'no-repeat', // Prevents tiling
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             >
                 {/* Optional overlay - commented out as in original */}
@@ -272,7 +273,7 @@ export default function Section2() {
                                 {/* Spacer */}
                                 <div className="flex-1"></div>
 
-                                {/* Buttons */}
+                                {/* Buttons - with arrow icon properly aligned */}
                                 <div className="w-full mt-4">
                                     <div className="p-[2px] rounded-lg bg-gradient-to-br from-yellow-400 to-green-500">
                                         <div
@@ -284,8 +285,9 @@ export default function Section2() {
                                                 backgroundRepeat: "no-repeat",
                                             }}
                                         >
-                                            <button className="w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
+                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
                                                 Play Now
+                                                <ChevronRight className="ml-1 h-5 w-5" />
                                             </button>
                                         </div>
                                     </div>
@@ -328,11 +330,13 @@ export default function Section2() {
                                     </div>
                                 </div>
 
-                                {/* Buttons */}
+                                {/* Buttons - with arrow icon and dark overlay on yellow button */}
                                 <div className="w-full">
-                                    <div className="p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500">
+                                    <div className="p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500 relative">
+                                        {/* Dark overlay for yellow button background */}
+                                        <div className="absolute inset-0 rounded-lg bg-black/30 pointer-events-none"></div>
                                         <div
-                                            className="cursor-pointer rounded-lg overflow-hidden bg-white"
+                                            className="cursor-pointer rounded-lg overflow-hidden bg-white relative"
                                             style={{
                                                 backgroundImage: `url(${yellowbuttonbg})`,
                                                 backgroundSize: 'cover',
@@ -340,8 +344,11 @@ export default function Section2() {
                                                 backgroundRepeat: "no-repeat",
                                             }}
                                         >
-                                            <button className="w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
+                                            {/* Additional dark overlay on the button itself */}
+                                            <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg relative z-10">
                                                 Play Now
+                                                <ChevronRight className="ml-1 h-5 w-5" />
                                             </button>
                                         </div>
                                     </div>
@@ -351,11 +358,13 @@ export default function Section2() {
                     </div>
                 </div>
 
-                {/* Bottom Play Now Button */}
+                {/* Bottom Play Now Button - with arrow icon and dark overlay */}
                 <div className="flex justify-center px-4">
-                    <div className="inline-block p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500 w-full sm:w-auto max-w-[300px] sm:max-w-none">
+                    <div className="inline-block p-[2px] rounded-lg bg-gradient-to-br from-white/70 to-yellow-500 w-full sm:w-auto max-w-[300px] sm:max-w-none relative">
+                        {/* Dark overlay for yellow button background */}
+                        <div className="absolute inset-0 rounded-lg bg-black/30 pointer-events-none"></div>
                         <div
-                            className="cursor-pointer rounded-lg overflow-hidden bg-white"
+                            className="cursor-pointer rounded-lg overflow-hidden bg-white relative"
                             style={{
                                 backgroundImage: `url(${yellowbuttonbg})`,
                                 backgroundSize: 'cover',
@@ -363,8 +372,11 @@ export default function Section2() {
                                 backgroundRepeat: "no-repeat",
                             }}
                         >
-                            <button className="w-full px-8 sm:px-12 md:px-16 py-2 text-lg sm:text-xl font-bold text-white drop-shadow-lg">
+                            {/* Additional dark overlay on the button itself */}
+                            <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+                            <button className="flex items-center justify-center w-full px-8 sm:px-12 md:px-16 py-2 text-lg sm:text-xl font-bold text-white drop-shadow-lg relative z-10">
                                 Play Now
+                                <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
                             </button>
                         </div>
                     </div>
