@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import section1bg from '../../assets/section1bg.png';
 import section2bg from '../../assets/section2bg.png';
 import section3bg from '../../assets/section3bg.png';
@@ -8,7 +8,8 @@ import turbokeno from '../../assets/turbokeno.png';
 import kenoblast from '../../assets/kenoblast.png';
 import horseracing from '../../assets/horseracing.png';
 import greenbuttonbg from '../../assets/green_buttonbg.png';
-import call404API from '../../utils/api';
+import { Link } from 'react-router-dom';
+
 
 const slides = [
   {
@@ -17,15 +18,13 @@ const slides = [
     logo: luckylotto,
     jackpot: "JACKPOT $1,500,000!",
     buttonText: "Play Now",
-    buttonAction: call404API
   },
   {
     id: 2,
     bgImage: section2bg,
     logo: turbokeno,
     jackpot: "JACKPOT $2,000,000!",
-    buttonText: "Play Now",
-    buttonAction: call404API
+    buttonText: "Play Now"
   },
   {
     id: 3,
@@ -33,7 +32,6 @@ const slides = [
     logo: kenoblast,
     jackpot: "JACKPOT $3,500,000!",
     buttonText: "Play Now",
-    buttonAction: call404API
   },
   {
     id: 4,
@@ -41,7 +39,6 @@ const slides = [
     logo: horseracing,
     jackpot: "JACKPOT $4,500,000!",
     buttonText: "Play Now",
-    buttonAction: call404API
   }
 ];
 
@@ -161,6 +158,7 @@ const Section1 = () => {
               </div>
 
               {/* Play Now Button */}
+              <Link to="/game">
               <div className="relative group">
                 <div className="relative p-0.5 rounded-lg bg-linear-to-br from-yellow-400 to-green-500">
                   <div
@@ -172,18 +170,21 @@ const Section1 = () => {
                       backgroundRepeat: "no-repeat",
                     }}
                   >
+                    
                     <button
                       className="px-16 py-4 text-2xl md:text-3xl font-bold text-white drop-shadow-lg cursor-pointer"
                       onClick={slide.buttonAction}
                     >
-                      {slide.buttonText}
+                     Play Now
                     </button>
+                    
                   </div>
                 </div>
 
                 {/* Button Glow Effect */}
                 <div className="absolute inset-0 bg-green-400/30 blur-xl group-hover:bg-green-400/50 transition-all duration-300 -z-10"></div>
               </div>
+              </Link>
             </div>
           </div>
         ))}

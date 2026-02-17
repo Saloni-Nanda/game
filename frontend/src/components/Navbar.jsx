@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import navbarbg from '../assets/navbarbg.png';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('games'); // Default active section
+
+    const handleSectionClick = (section) => {
+        setActiveSection(section);
+        setIsMobileMenuOpen(false); // Close mobile menu after clicking
+    };
+
+    const navLinks = [
+        { id: 'games', label: 'Games' },
+        { id: 'promotions', label: 'Promotions' },
+        { id: 'jackpots', label: 'Jackpots' },
+        { id: 'wallet', label: 'My Wallet' }
+    ];
 
     return (
         <nav className="relative px-8 md:px-4 sm:px-4 py-3 shadow-2xl overflow-hidden border-t-2 border-b-2 border-[#0d0a4ba1]">
@@ -39,45 +53,32 @@ export default function Navbar() {
 
                     {/* Desktop Navigation Links - Only visible on lg+ */}
                     <div className="hidden lg:flex gap-10 flex-1 justify-center">
-                        <a
-                            href="#games"
-                            className="group relative text-white font-medium text-base py-2 transition-all duration-300"
-                        >
-                            <span className="relative inline-block">
-                                Games
-                                <span className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] h-1 
-                     bg-linear-to-r from-yellow-600 via-yellow-300 to-yellow-600 
-                     rounded-full 
-                     shadow-[0_0_15px_4px_rgba(250,204,21,0.9)]
-                     transition-all duration-300
-                     group-hover:w-[110%]">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.id}
+                                href={`#${link.id}`}
+                                onClick={() => handleSectionClick(link.id)}
+                                className="group relative text-white font-medium text-base py-2 transition-all duration-300 cursor-pointer"
+                            >
+                                <span className="relative inline-block">
+                                    {link.label}
+                                    <span 
+                                        className={`absolute left-1/2 -translate-x-1/2 -bottom-2 h-1 
+                                            bg-linear-to-r from-yellow-600 via-yellow-300 to-yellow-600 
+                                            rounded-full 
+                                            shadow-[0_0_15px_4px_rgba(250,204,21,0.9)]
+                                            transition-all duration-300
+                                            ${activeSection === link.id ? 'w-[110%]' : 'w-0 group-hover:w-[110%]'}`}
+                                    />
                                 </span>
-                            </span>
-                        </a>
-
-                        <a
-                            href="#promotions"
-                            className="text-[#a8b9d1] font-medium text-base py-2 transition-colors duration-300 hover:text-white"
-                        >
-                            Promotions
-                        </a>
-                        <a
-                            href="#jackpots"
-                            className="text-[#a8b9d1] font-medium text-base py-2 transition-colors duration-300 hover:text-white"
-                        >
-                            Jackpots
-                        </a>
-                        <a
-                            href="#wallet"
-                            className="text-[#a8b9d1] font-medium text-base py-2 transition-colors duration-300 hover:text-white"
-                        >
-                            My Wallet
-                        </a>
+                            </a>
+                        ))}
                     </div>
 
                     {/* Right Section - Visible on lg+ and md */}
                     <div className="hidden md:flex items-center gap-4">
                         {/* Balance Display */}
+                        <Link to="/wallet">
                         <div className="relative flex items-center gap-2 rounded-lg px-4.5 py-2.5 border-[1.5px] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
                             style={{
                                 background: 'linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 152, 0, 0.15) 100%)',
@@ -102,8 +103,10 @@ export default function Navbar() {
                                 $1,250.75
                             </span>
                         </div>
+                        </Link>
 
                         {/* Sign Up Button */}
+                        <Link to="/signup">
                         <button className="relative px-7 py-2.5 rounded-lg font-bold text-base text-[#0a1e3d] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
                             style={{
                                 background: 'linear-gradient(135deg, #ffa726 0%, #ff9800 50%, #fb8c00 100%)',
@@ -125,8 +128,10 @@ export default function Navbar() {
                             ></span>
                             <span className="relative">Sign Up</span>
                         </button>
+                        </Link>
 
                         {/* User Button */}
+                        <Link to="/profile">
                         <button
                             className="w-11 h-11 rounded-lg flex items-center justify-center border-2 transition-all duration-300 hover:-translate-y-0.5"
                             style={{
@@ -147,6 +152,7 @@ export default function Navbar() {
                                 <path d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z" fill="white" />
                             </svg>
                         </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Toggle - Using Lucide React icons */}
@@ -170,45 +176,34 @@ export default function Navbar() {
                 `}>
                     {/* Navigation Links - Mobile/Tablet */}
                     <div className="flex flex-col gap-0 mt-4 pt-4 border-t border-white/10">
-                        <a
-                            href="#games"
-                            className="group relative text-white font-medium text-base py-3 transition-all duration-300"
-                        >
-                            <span className="relative inline-block">
-                                Games
-                                <span className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-0 h-1 
-                     bg-linear-to-r from-yellow-600 via-yellow-300 to-yellow-600 
-                     rounded-full 
-                     shadow-[0_0_15px_4px_rgba(250,204,21,0.9)]
-                     transition-all duration-300
-                     group-hover:w-[110%]">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.id}
+                                href={`#${link.id}`}
+                                onClick={() => handleSectionClick(link.id)}
+                                className={`group relative font-medium text-base py-3 transition-all duration-300 cursor-pointer
+                                    ${activeSection === link.id ? 'text-white' : 'text-[#a8b9d1] hover:text-white'}`}
+                            >
+                                <span className="relative inline-block">
+                                    {link.label}
+                                    <span 
+                                        className={`absolute left-1/2 -translate-x-1/2 -bottom-2 h-1 
+                                            bg-linear-to-r from-yellow-600 via-yellow-300 to-yellow-600 
+                                            rounded-full 
+                                            shadow-[0_0_15px_4px_rgba(250,204,21,0.9)]
+                                            transition-all duration-300
+                                            ${activeSection === link.id ? 'w-[110%]' : 'w-0 group-hover:w-[110%]'}`}
+                                    />
                                 </span>
-                            </span>
-                        </a>
-
-                        <a
-                            href="#promotions"
-                            className="text-[#a8b9d1] font-medium text-base py-3 transition-colors duration-300 hover:text-white"
-                        >
-                            Promotions
-                        </a>
-                        <a
-                            href="#jackpots"
-                            className="text-[#a8b9d1] font-medium text-base py-3 transition-colors duration-300 hover:text-white"
-                        >
-                            Jackpots
-                        </a>
-                        <a
-                            href="#wallet"
-                            className="text-[#a8b9d1] font-medium text-base py-3 transition-colors duration-300 hover:text-white"
-                        >
-                            My Wallet
-                        </a>
+                            </a>
+                        ))}
                     </div>
 
                     {/* Right Section - Only on sm (mobile), hidden on md (tablet) */}
                     <div className="md:hidden flex items-center justify-between gap-4 mt-4 pt-4 border-t border-white/10">
+
                         {/* Balance Display */}
+                        <Link to="/wallet">
                         <div className="relative flex items-center gap-2 rounded-lg px-4.5 py-2.5 border-[1.5px] overflow-hidden flex-1 max-w-35"
                             style={{
                                 background: 'linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 152, 0, 0.15) 100%)',
@@ -233,8 +228,10 @@ export default function Navbar() {
                                 $1,250.75
                             </span>
                         </div>
+                        </Link>
 
                         {/* Sign Up Button */}
+                        <Link to="/signup">
                         <button className="relative px-5 py-2.5 rounded-lg font-bold text-sm text-[#0a1e3d] overflow-hidden transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
                             style={{
                                 background: 'linear-gradient(135deg, #ffa726 0%, #ff9800 50%, #fb8c00 100%)',
@@ -256,8 +253,10 @@ export default function Navbar() {
                             ></span>
                             <span className="relative">Sign Up</span>
                         </button>
+                        </Link>
 
                         {/* User Button */}
+                        <Link to="/profile">
                         <button
                             className="w-10 h-10 rounded-lg flex items-center justify-center border-2 transition-all duration-300 hover:-translate-y-0.5"
                             style={{
@@ -278,6 +277,7 @@ export default function Navbar() {
                                 <path d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V16H16V14C16 11.34 10.67 10 8 10Z" fill="white" />
                             </svg>
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>
