@@ -11,6 +11,7 @@ import card4bg from '../../assets/card4bg.png';
 import horseracing from '../../assets/horseracing.png';
 import yellowbuttonbg from '../../assets/yellow_buttonbg.png';
 import { ChevronRight } from 'lucide-react';
+import call404API from '../../utils/api';
 
 export default function Section2() {
     return (
@@ -126,7 +127,9 @@ export default function Section2() {
                                                     backgroundRepeat: "no-repeat",
                                                 }}
                                             >
-                                                <button className="w-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg whitespace-nowrap">
+                                                <button className="w-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg whitespace-nowrap cursor-pointer"
+                                                onClick={call404API}
+                                                >
                                                     Quick Pick
                                                 </button>
                                             </div>
@@ -144,7 +147,9 @@ export default function Section2() {
                                                     backgroundRepeat: "no-repeat",
                                                 }}
                                             >
-                                                <button className="w-full px-2 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
+                                                <button className="w-full px-2 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg cursor-pointer"
+                                                 onClick={call404API}
+                                                >
                                                     Clear
                                                 </button>
                                             </div>
@@ -223,7 +228,9 @@ export default function Section2() {
                                                     backgroundRepeat: "no-repeat",
                                                 }}
                                             >
-                                                <button className="w-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg whitespace-nowrap">
+                                                <button className="w-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg whitespace-nowrap cursor-pointer"
+                                                 onClick={call404API}
+                                                >
                                                     Quick Pick
                                                 </button>
                                             </div>
@@ -241,7 +248,9 @@ export default function Section2() {
                                                     backgroundRepeat: "no-repeat",
                                                 }}
                                             >
-                                                <button className="w-full px-2 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
+                                                <button className="w-full px-2 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg cursor-pointer"
+                                                 onClick={call404API}
+                                                >
                                                     Clear
                                                 </button>
                                             </div>
@@ -294,7 +303,9 @@ export default function Section2() {
                                                 backgroundRepeat: "no-repeat",
                                             }}
                                         >
-                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg">
+                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg cursor-pointer"
+                                             onClick={call404API}
+                                            >
                                                 Play Now
                                                 <ChevronRight className="ml-1 h-5 w-5" />
                                             </button>
@@ -355,7 +366,9 @@ export default function Section2() {
                                         >
                                             {/* Additional dark overlay on the button itself */}
                                             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
-                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg relative z-10">
+                                            <button className="flex items-center justify-center w-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-bold text-white drop-shadow-lg relative z-10 cursor-pointer"
+                                             onClick={call404API}
+                                            >
                                                 Play Now
                                                 <ChevronRight className="ml-1 h-5 w-5" />
                                             </button>
@@ -383,7 +396,9 @@ export default function Section2() {
                         >
                             {/* Additional dark overlay on the button itself */}
                             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
-                            <button className="flex items-center justify-center w-full px-8 sm:px-12 md:px-16 py-2 text-lg sm:text-xl font-bold text-white drop-shadow-lg relative z-10">
+                            <button className="flex items-center justify-center w-full px-8 sm:px-12 md:px-16 py-2 text-lg sm:text-xl font-bold text-white drop-shadow-lg relative z-10 cursor-pointer"
+                             onClick={call404API}
+                            >
                                 Play Now
                                 <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
                             </button>
